@@ -3,7 +3,6 @@ package com.petpet.csvmod2rdf.parser;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Arrays;
 
 import au.com.bytecode.opencsv.CSVReader;
 
@@ -15,7 +14,7 @@ public class AttributesParser extends CSVParser {
   @Override
   public void read() {
     try {
-      CSVReader reader = new CSVReader(new FileReader(this.getFile()));
+      CSVReader reader = new CSVReader(new FileReader(this.getFile()), ';');
 
       // skip header
       String[] line = reader.readNext();

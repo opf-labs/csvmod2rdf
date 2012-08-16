@@ -1,16 +1,12 @@
 package com.petpet.csvmod2rdf.converter;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import au.com.bytecode.opencsv.CSVReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.petpet.csvmod2rdf.model.Attribute;
-import com.petpet.csvmod2rdf.model.CriterionCategory;
 import com.petpet.csvmod2rdf.model.Measure;
 import com.petpet.csvmod2rdf.parser.AttributeIntegrityChecker;
 import com.petpet.csvmod2rdf.parser.AttributesParser;
@@ -22,6 +18,8 @@ import com.petpet.csvmod2rdf.parser.MeasuresParser;
 import com.petpet.csvmod2rdf.utils.Cache;
 
 public class Converter {
+
+  private static final Logger LOG = LoggerFactory.getLogger(Converter.class);
 
   private Cache cache;
   private String categoriesPath;
@@ -54,25 +52,30 @@ public class Converter {
   }
 
   private void readCategories() {
+    LOG.info("Reading categories file");
     CSVParser cat = new CategoryParser();
     cat.setFile(this.categoriesPath);
     cat.setCache(this.cache);
     cat.setIntegrityChecker(new CategoryIntegrityChecker());
+    cat.read();
   }
 
   private void readAttributes() {
+    LOG.info("Reading attributes file");
     CSVParser att = new AttributesParser();
     att.setFile(this.attributesPath);
     att.setCache(this.cache);
     att.setIntegrityChecker(new AttributeIntegrityChecker(this.cache));
+    att.read();
   }
 
   private void readMeasures() {
-   CSVParser mp = new MeasuresParser();
-   mp.setFile(this.measuresPath);
-   mp.setCache(this.cache);
-   mp.setIntegrityChecker(new MeasuresIntegrityChecker(this.cache));
-   
+    LOG.info("Reading measures file");
+    CSVParser mp = new MeasuresParser();
+    mp.setFile(this.measuresPath);
+    mp.setCache(this.cache);
+    mp.setIntegrityChecker(new MeasuresIntegrityChecker(this.cache));
+    mp.read();
 
   }
 

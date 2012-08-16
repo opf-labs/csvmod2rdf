@@ -13,7 +13,7 @@ public class CategoryParser extends CSVParser {
   @Override
   public void read() {
     try {
-      CSVReader reader = new CSVReader(new FileReader(this.getFile()));
+      CSVReader reader = new CSVReader(new FileReader(this.getFile()), ';');
 
       //skip header...
       String[] line = reader.readNext();

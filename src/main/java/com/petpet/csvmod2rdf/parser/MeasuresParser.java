@@ -3,22 +3,21 @@ package com.petpet.csvmod2rdf.parser;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Arrays;
+import java.util.List;
 
 import au.com.bytecode.opencsv.CSVReader;
 
 import com.petpet.csvmod2rdf.model.Attribute;
 import com.petpet.csvmod2rdf.model.Measure;
-import com.petpet.csvmod2rdf.utils.Cache;
 
 public class MeasuresParser extends CSVParser {
 
   @Override
   public void read() {
     try {
-      CSVReader reader = new CSVReader(new FileReader(this.getFile()));
-
-      String[] line;
+      CSVReader reader = new CSVReader(new FileReader(this.getFile()), ';');
+      //skip header
+      String[] line = reader.readNext();
       String id, attr, name, desc, scale, restriction, deprecated;
       while ((line = reader.readNext()) != null) {
         if (this.getIntegrityChecker().examine(line)) {
@@ -36,7 +35,9 @@ public class MeasuresParser extends CSVParser {
           m.setRestriction(restriction);
           // TODO set deprecated...
 
-          a.getMeasures().add(m);
+          List<Measure> measures = a.getMeasures();
+          measures.add(m);
+          a.setMeasures(measures);
           this.getCache().putAttribute(a);
 
         }
