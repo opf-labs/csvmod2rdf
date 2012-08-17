@@ -1,5 +1,5 @@
-<owl:NamedIndividual rdf:about="http://scape-project.eu/pw/vocab/@{about}">
+<rdf:Description rdf:about="http://scape-project.eu/pw/vocab/@{about}">
   <rdf:type rdf:resource="http://scape-project.eu/pw/vocab/Category"/>
-  <name>@{name}</name>@{subcategory}
-</owl:NamedIndividual>
+  <name>@{name}</name>@{subcategories}
+</rdf:Description>
 

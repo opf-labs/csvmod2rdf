@@ -1,5 +1,6 @@
- <owl:NamedIndividual rdf:about="http://scape-project.eu/pw/vocab/@{about}">
+ <rdf:Description rdf:about="http://scape-project.eu/pw/vocab/@{about}">
   <rdf:type rdf:resource="http://scape-project.eu/pw/vocab/CriterionCategory"/>
+  <scope rdf:resource="http://scape-project.eu/pw/vocab/scopes#@{scope}" />
   <name>@{name}</name>
-</owl:NamedIndividual>
+</rdf:Description>
 
