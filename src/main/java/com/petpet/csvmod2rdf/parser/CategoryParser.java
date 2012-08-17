@@ -6,6 +6,7 @@ import java.io.IOException;
 
 import au.com.bytecode.opencsv.CSVReader;
 
+import com.petpet.csvmod2rdf.model.Category;
 import com.petpet.csvmod2rdf.model.CriterionCategory;
 
 public class CategoryParser extends CSVParser {
@@ -29,13 +30,18 @@ public class CategoryParser extends CSVParser {
           name = line[3];
           scope = line[4];
 
-          CriterionCategory cat = new CriterionCategory();
-          cat.setName(name);
-          cat.setScope(scope);
-          cat.setCategory(cCat);
-          cat.setSubcategory(cSubCat);
-          cat.setSubsubcategory(cSubSubCat);
+          Category cat = new Category(cCat, null);
           this.getCache().putCategory(cat);
+          
+          cat = new Category(cSubCat, cCat);
+          this.getCache().putCategory(cat);
+          
+          cat = new Category(cSubSubCat, cSubCat);
+          this.getCache().putCategory(cat);
+          
+          CriterionCategory critCat = new CriterionCategory(name, cSubSubCat);
+          critCat.setScope(scope);
+          this.getCache().putCategory(critCat);
         }
       }
 

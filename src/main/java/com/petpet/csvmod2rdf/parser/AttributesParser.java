@@ -4,12 +4,18 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import au.com.bytecode.opencsv.CSVReader;
 
 import com.petpet.csvmod2rdf.model.Attribute;
+import com.petpet.csvmod2rdf.model.Category;
 import com.petpet.csvmod2rdf.model.CriterionCategory;
 
 public class AttributesParser extends CSVParser {
+  
+  private static final Logger LOG = LoggerFactory.getLogger(AttributesParser.class);
 
   @Override
   public void read() {
@@ -26,11 +32,16 @@ public class AttributesParser extends CSVParser {
           name = line[2];
           desc = line[3];
 
-          CriterionCategory category = this.getCache().getCategory(cat);
+          Category category = this.getCache().getCategory(cat);
 
-          Attribute attr = new Attribute(name, desc, category);
-          attr.setId(id);
-          this.getCache().putAttribute(attr);
+          if (category.isLeaf()) {
+            Attribute attr = new Attribute(name, desc, (CriterionCategory) category);
+            attr.setId(id);
+            this.getCache().putAttribute(attr);
+          } else {
+            LOG.warn("There must be a collision of category names for [{}]", category.getName());
+            
+          }
 
         }
 

@@ -6,8 +6,10 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.petpet.csvmod2rdf.interfaces.OutputGenerator;
 import com.petpet.csvmod2rdf.model.Attribute;
 import com.petpet.csvmod2rdf.model.Measure;
+import com.petpet.csvmod2rdf.output.RDFGenerator;
 import com.petpet.csvmod2rdf.parser.AttributeIntegrityChecker;
 import com.petpet.csvmod2rdf.parser.AttributesParser;
 import com.petpet.csvmod2rdf.parser.CSVParser;
@@ -94,6 +96,8 @@ public class Converter {
 
     System.out.println("Parsed " + cat + " categories, " + attr + " attributes and " + meas + " measures");
 
+    OutputGenerator gen = new RDFGenerator(this.cache);
+    System.out.println(gen.getOutput());
   }
 
 }

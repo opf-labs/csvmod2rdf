@@ -2,56 +2,17 @@ package com.petpet.csvmod2rdf.model;
 
 import java.util.List;
 
-public class CriterionCategory {
+public class CriterionCategory extends Category {
 
-  private String category;
-  
-  private String subcategory;
-  
-  private String subsubcategory;
-  
-  private String name;
-  
+  public CriterionCategory(String name, String parent) {
+    super(name, parent);
+    this.setLeaf(true);
+  }
+
   private String scope;
   
   private List<Attribute> attributes;
   
-  public CriterionCategory() {
-    
-  }
-
-  public String getCategory() {
-    return category;
-  }
-
-  public void setCategory(String category) {
-    this.category = category;
-  }
-
-  public String getSubcategory() {
-    return subcategory;
-  }
-
-  public void setSubcategory(String subcategory) {
-    this.subcategory = subcategory;
-  }
-
-  public String getSubsubcategory() {
-    return subsubcategory;
-  }
-
-  public void setSubsubcategory(String subsubcategory) {
-    this.subsubcategory = subsubcategory;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
   public String getScope() {
     return scope;
   }

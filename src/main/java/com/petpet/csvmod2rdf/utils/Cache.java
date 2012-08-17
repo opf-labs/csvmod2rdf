@@ -4,46 +4,59 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-
 import com.petpet.csvmod2rdf.model.Attribute;
-import com.petpet.csvmod2rdf.model.CriterionCategory;
+import com.petpet.csvmod2rdf.model.Category;
 
 public class Cache {
 
-  private Map<String, CriterionCategory> categories;
+  private Map<String, Category> categories;
 
   private Map<String, Attribute> attributes;
 
   public Cache() {
-    this.categories = Collections.synchronizedMap(new HashMap<String, CriterionCategory>());
+    this.categories = Collections.synchronizedMap(new HashMap<String, Category>());
     this.attributes = Collections.synchronizedMap(new HashMap<String, Attribute>());
   }
-  
-  public void putCategory(CriterionCategory cat) {
+
+  public void putCategory(Category cat) {
     if (cat != null) {
-      this.categories.put(cat.getName(), cat);
+
+      Category original = this.categories.get(cat.getName());
+      if (original == null) {
+        // not existing
+        if (cat.getParent() == null) {
+          // top category
+          this.categories.put(cat.getName(), cat);
+
+        } else {
+          // child category
+          Category parent = this.categories.get(cat.getParent());
+          parent.getChidlren().add(cat);
+          this.categories.put(cat.getName(), cat);
+        }
+      }
     }
   }
-  
+
   public void putAttribute(Attribute attr) {
     if (attr != null) {
       this.attributes.put(attr.getName(), attr);
     }
   }
-  
-  public CriterionCategory getCategory(String name) {
+
+  public Category getCategory(String name) {
     return this.categories.get(name);
   }
-  
+
   public Attribute getAttribute(String name) {
     return this.attributes.get(name);
   }
 
-  public Map<String, CriterionCategory> getCategories() {
+  public Map<String, Category> getCategories() {
     return Collections.unmodifiableMap(categories);
   }
 
-  public void setCategories(Map<String, CriterionCategory> categories) {
+  public void setCategories(Map<String, Category> categories) {
     this.categories = categories;
   }
 

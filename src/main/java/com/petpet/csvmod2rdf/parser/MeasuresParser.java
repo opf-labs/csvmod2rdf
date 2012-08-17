@@ -30,7 +30,7 @@ public class MeasuresParser extends CSVParser {
           deprecated = line[6];
 
           Attribute a = this.getCache().getAttribute(attr);
-          Measure m = new Measure(name, desc, a);
+          Measure m = new Measure(id, name, desc, a);
           m.setScale(scale);
           m.setRestriction(restriction);
           // TODO set deprecated...

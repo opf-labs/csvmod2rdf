@@ -1,0 +1,7 @@
+<owl:NamedIndividual rdf:about="http://scape-project.eu/pw/vocab/@{about}">
+  <rdf:type rdf:resource="http://scape-project.eu/pw/vocab/Measure"/>
+  <name>@{name}</name>
+  <description>@{description}</description>
+  <attribute rdf:resource="http://scape-project.eu/pw/vocab/@{attribute}"/>
+</owl:NamedIndividual>
+
