@@ -1,6 +1,6 @@
 <rdf:Description rdf:about="http://scape-project.eu/pw/vocab/@{about}">
   <rdf:type rdf:resource="http://scape-project.eu/pw/vocab/Measure"/>
-  <name>@{name}</name>
+  <rdfs:label>@{name}</rdfs:label>
   <description>@{description}</description>
   <attribute rdf:resource="http://scape-project.eu/pw/vocab/@{attribute}"/>
   <scale rdf:resource="http://scape-project.eu/pw/vocab/scales#@{scale}" />
