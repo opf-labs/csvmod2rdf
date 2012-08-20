@@ -1,0 +1,53 @@
+"Top category";"Subcategory";;"Criterion category (UNIQUE)";"scope"
+"Action";"Action quality";"Performance efficiency";"Time behaviour";"alternative action"
+;;;"Resource utilization";"alternative action"
+;;;"Capacity";"alternative action"
+;;"Compatability";"Co-existence";"alternative action"
+;;;"Interoperability";"alternative action"
+;;"Usability";"Appropriateness recognizability";"alternative action"
+;;;"Learnability";"alternative action"
+;;;"Operability";"alternative action"
+;;;"User error protection";"alternative action"
+;;;"User interface aesthetics";"alternative action"
+;;;"Accessibility";"alternative action"
+;;"Portability";"Adaptability";"alternative action"
+;;;"Installability";"alternative action"
+;;;"Replaceability";"alternative action"
+;;"Reliability";"Maturity";"alternative action"
+;;;"Availability";"alternative action"
+;;;"Fault tolerance";"alternative action"
+;;;"Recoverability";"alternative action"
+;;"Functional suitability";"Functional completeness";"alternative action"
+;;"Functional correctness";"Functional correctness: Information Property";"object"
+;;;"Functional correctness: Transformation Independent Property";"object"
+;;;"Functional correctness: Representation Instance Property";"object"
+;;;"Functional appropriateness";"alternative action"
+;;"Maintainability";"Modularity";"alternative action"
+;;;"Reusability";"alternative action"
+;;;"Analysability";"alternative action"
+;;;"Modifiability";"alternative action"
+;;;"Testability";"alternative action"
+;;"Security";"Confidentiality";"alternative action"
+;;;"Integrity";"alternative action"
+;;;"Non-repudiation";"alternative action"
+;;;"Accountability";"alternative action"
+;;;"Authenticity of the action";"alternative action"
+;;;"Action costs";"alternative action"
+;;;"Action licensing";"alternative action"
+;;;"Action maintenance";"alternative action"
+"Outcome";;"Outcome effect";"Outcome effect";"alternative action"
+;"Format of the content";;"Format sustainability";"alternative action"
+;;;"Format quality and functionality";"alternative action"
+;;;"Format business factors";"alternative action"
+;;;;
+;;;;
+;;;;
+"Scopes:";"object";;;
+;"alternative action";;;
+;;;;
+"Scales:";"Boolean";;;
+;"Free Text";;;
+;"Number";;;
+;"Positive Number";;;
+;"Positive Integer";;;
+;"Ordinal";;;
