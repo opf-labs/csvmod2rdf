@@ -16,31 +16,27 @@ public class CategoryParser extends CSVParser {
     try {
       CSVReader reader = new CSVReader(new FileReader(this.getFile()), ';');
 
-      //skip header...
+      // skip header...
       String[] line = reader.readNext();
-      String cCat = "";
-      String cSubCat = "";
-      String cSubSubCat = "";
-      String name, scope;
+
       while ((line = reader.readNext()) != null) {
         if (this.getIntegrityChecker().examine(line)) {
-          cCat = this.getCurrentCategory(cCat, line[0]);
-          cSubCat = this.getCurrentCategory(cSubCat, line[1]);
-          cSubSubCat = this.getCurrentCategory(cSubSubCat, line[2]);
-          name = line[3];
-          scope = line[4];
 
-          Category cat = new Category(cCat, null);
+          Category cat = new Category(line[0], null);
           this.getCache().putCategory(cat);
-          
-          cat = new Category(cSubCat, cCat);
-          this.getCache().putCategory(cat);
-          
-          cat = new Category(cSubSubCat, cSubCat);
-          this.getCache().putCategory(cat);
-          
-          CriterionCategory critCat = new CriterionCategory(name, cSubSubCat);
-          critCat.setScope(scope);
+
+          if (line[1] != null && !line[1].equals("")) {
+            cat = new Category(line[1], line[0]);
+            this.getCache().putCategory(cat);
+          }
+
+          if (line[2] != null && !line[2].equals("")) {
+            cat = new Category(line[2], line[1]);
+            this.getCache().putCategory(cat);
+          }
+
+          CriterionCategory critCat = new CriterionCategory(line[3], cat.getName());
+          critCat.setScope(line[4]);
           this.getCache().putCategory(critCat);
         }
       }
@@ -50,10 +46,6 @@ public class CategoryParser extends CSVParser {
     } catch (IOException e) {
       e.printStackTrace();
     }
-  }
-
-  private String getCurrentCategory(String current, String active) {
-    return active.equals("") ? current : active;
   }
 
 }

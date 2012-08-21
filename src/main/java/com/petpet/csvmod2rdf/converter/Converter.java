@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import com.petpet.csvmod2rdf.interfaces.OutputGenerator;
 import com.petpet.csvmod2rdf.model.Attribute;
 import com.petpet.csvmod2rdf.model.Measure;
+import com.petpet.csvmod2rdf.output.FileOutput;
 import com.petpet.csvmod2rdf.output.RDFXMLGenerator;
 import com.petpet.csvmod2rdf.parser.AttributeIntegrityChecker;
 import com.petpet.csvmod2rdf.parser.AttributesParser;
@@ -97,7 +98,11 @@ public class Converter {
     System.out.println("Parsed " + cat + " categories, " + attr + " attributes and " + meas + " measures");
 
     OutputGenerator gen = new RDFXMLGenerator(this.cache);
-    System.out.println(gen.getOutput());
+    String rdf = gen.getOutput();
+    System.out.println(rdf);
+    
+    FileOutput output = new FileOutput();
+    output.store(rdf, null);
   }
 
 }

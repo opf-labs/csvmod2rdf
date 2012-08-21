@@ -19,6 +19,11 @@ public class CategoryIntegrityChecker implements IntegrityCheckStrategy {
       proceed = false;
     }
     
+    if (line[0] == null || line[0].equals("")) {
+      LOG.warn("No top category provided. File: categories, line [{}]", Arrays.deepToString(line));
+      proceed = false;
+    }
+    
     if (line[3] == null || line[3].equals("")) {
       LOG.warn("No name provided for category. File: categories, line: [{}]", Arrays.deepToString(line));
       proceed = false;
