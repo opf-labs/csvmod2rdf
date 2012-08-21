@@ -1,4 +1,4 @@
-<rdf:Description rdf:about="http://scape-project.eu/pw/vocab/@{about}">
+<rdf:Description rdf:about="http://scape-project.eu/pw/vocab/categories/@{about}">
   <rdf:type rdf:resource="http://scape-project.eu/pw/vocab/Category"/>
   <rdfs:label>@{name}</rdfs:label>@{subcategories}
 </rdf:Description>
