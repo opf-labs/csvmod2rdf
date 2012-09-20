@@ -1,6 +1,5 @@
 package com.petpet.csvmod2rdf.output;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Map;
@@ -86,6 +85,13 @@ public class RDFXMLGenerator implements OutputGenerator {
               .replace(Constants.ATTRIBUTE_KEY, attribute.getId())
               .replace(Constants.DESCRIPTION_KEY, m.getDescription())
               .replace(Constants.SCALE_KEY, this.getScaleId(m.getScale()));
+          
+          if (m.getRestriction() != null && !m.getRestriction().equals("")) {
+            measure = measure.replace(Constants.RESTRICTION_KEY, m.getRestriction());
+          } else {
+            measure = measure.replace("\n" + Constants.RESTRICTION_LINE, "");
+          }
+          
 
           mInd.append(measure);
         }

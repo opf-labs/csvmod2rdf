@@ -4,5 +4,6 @@
   <description>@{description}</description>
   <attribute rdf:resource="http://scape-project.eu/pw/vocab/attributes/@{attribute}"/>
   <scale rdf:resource="http://scape-project.eu/pw/vocab/scales#@{scale}" />
+  <restriction>@{restriction}</restriction>
 </rdf:Description>
 
