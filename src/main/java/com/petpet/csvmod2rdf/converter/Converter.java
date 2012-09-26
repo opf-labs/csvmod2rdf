@@ -96,10 +96,11 @@ public class Converter {
     }
 
     System.out.println("Parsed " + cat + " categories, " + attr + " attributes and " + meas + " measures");
-
     OutputGenerator gen = new RDFXMLGenerator(this.cache);
     String rdf = gen.getOutput();
+    System.out.println("################# OUTPUT #################");
     System.out.println(rdf);
+    System.out.println("################# END #################");
     
     FileOutput output = new FileOutput();
     output.store(rdf, null);

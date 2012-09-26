@@ -4,7 +4,7 @@ public class Constants {
 
   public static final String NAME = "csvmod2rdf";
 
-  public static final String VERSION = "0.3.0";
+  public static final String VERSION = "0.3.1";
 
   public static final String SIGNATURE = "<!-- Generated with " + NAME + " " + VERSION + "  -->";
   

@@ -4,7 +4,7 @@
 
   <groupId>com.petpet</groupId>
   <artifactId>csvmod2rdf</artifactId>
-  <version>0.3.0</version>
+  <version>0.3.1</version>
   <packaging>jar</packaging>
 
   <name>csvmod2rdf</name>

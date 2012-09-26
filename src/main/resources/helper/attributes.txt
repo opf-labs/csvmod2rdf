@@ -2,6 +2,6 @@
   <rdf:type rdf:resource="http://scape-project.eu/pw/vocab/Attribute"/>
   <rdfs:label>@{name}</rdfs:label>
   <description>@{description}</description>
-  <criterioncategory rdf:resource="http://scape-project.eu/pw/vocab/@{category}"/>@{measures}
+  <criterioncategory rdf:resource="http://scape-project.eu/pw/vocab/categories/@{category}"/>@{measures}
 </rdf:Description>
 
