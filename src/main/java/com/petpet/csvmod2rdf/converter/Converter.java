@@ -112,7 +112,7 @@ public class Converter {
 //    System.out.println(xslt);
 //    System.out.println("################# END #################");
     output = new FileOutput();
-    output.store(xslt, "target/xslt_rules.snippet");    
+    output.store(xslt, "xslt_rules.snippet");    
     
   }
 
