@@ -18,7 +18,7 @@ public class MeasuresParser extends CSVParser {
       CSVReader reader = new CSVReader(new FileReader(this.getFile()), ';');
       //skip header
       String[] line = reader.readNext();
-      String id, attr, name, desc, scale, restriction, deprecated;
+      String id, attr, name, desc, scale, restriction, deprecated, oldPropertyUri;
       while ((line = reader.readNext()) != null) {
         if (this.getIntegrityChecker().examine(line)) {
           id = line[0];
@@ -28,6 +28,7 @@ public class MeasuresParser extends CSVParser {
           scale = line[4];
           restriction = line[5];
           deprecated = line[6];
+          oldPropertyUri = line[7];
 
           Attribute a = this.getCache().getAttribute(attr);
           Measure m = new Measure(id, name, desc, a);
@@ -38,6 +39,7 @@ public class MeasuresParser extends CSVParser {
           List<Measure> measures = a.getMeasures();
           measures.add(m);
           a.setMeasures(measures);
+          m.setOldPropertyUri(oldPropertyUri);
           this.getCache().putAttribute(a);
 
         }

@@ -1,0 +1,16 @@
+<xsl:template match="plato:criterion[@ID='@{measurement_uri}']">
+<measure ID="http://scape-project.eu/pw/vocab/measures/@{about}">
+	<name>@{name}</name>
+	<description>@{description}</description>
+	<attribute ID="http://scape-project.eu/pw/vocab/attributes/@{attribute}">
+		<name>@{attr_name}</name>
+		<description>@{attr_description}</description>
+		<category ID="http://scape-project.eu/pw/vocab/categories/@{category}" scope="@{scope}">
+			<name>@{categoryname}</name>
+		</category>
+	</attribute>
+	<@{scale} unit="" restriction="@{restriction}">
+		<changelog created="{$nowAsISO_8601str}" createdBy="xslt-migration" changed="{$nowAsISO_8601str}" changedBy="xslt-migration"/>
+	</@{scale}>
+</measure>
+</xsl:template>

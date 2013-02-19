@@ -16,6 +16,8 @@ public class Measure {
   
   private String deprecated;
   
+  private String oldPropertyUri;
+  
   public Measure(String id, String name, String description, Attribute attribute) {
     this.id = id;
     this.name = name;
@@ -78,4 +80,12 @@ public class Measure {
   public void setDeprecated(String deprecated) {
     this.deprecated = deprecated;
   }
+
+public String getOldPropertyUri() {
+	return oldPropertyUri;
+}
+
+public void setOldPropertyUri(String oldPropertyUri) {
+	this.oldPropertyUri = oldPropertyUri;
+}
 }

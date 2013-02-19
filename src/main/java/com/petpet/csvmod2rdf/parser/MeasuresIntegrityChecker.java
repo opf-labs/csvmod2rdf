@@ -24,7 +24,7 @@ public class MeasuresIntegrityChecker implements IntegrityCheckStrategy {
 
     // with OLD PROPERTY
     // remove comments
-    if (line.length != 9) {
+    if (line.length != 8) {
       LOG.warn("Line has {} columns instead of 8. File: measures, line: [{}]", line.length, Arrays.deepToString(line));
       proceed = false;
     }

@@ -11,6 +11,7 @@ import com.petpet.csvmod2rdf.model.Attribute;
 import com.petpet.csvmod2rdf.model.Measure;
 import com.petpet.csvmod2rdf.output.FileOutput;
 import com.petpet.csvmod2rdf.output.RDFXMLGenerator;
+import com.petpet.csvmod2rdf.output.XSLTRuleGenerator;
 import com.petpet.csvmod2rdf.parser.AttributeIntegrityChecker;
 import com.petpet.csvmod2rdf.parser.AttributesParser;
 import com.petpet.csvmod2rdf.parser.CSVParser;
@@ -104,6 +105,15 @@ public class Converter {
     
     FileOutput output = new FileOutput();
     output.store(rdf, null);
+    
+    gen = new XSLTRuleGenerator(this.cache);
+    String xslt = gen.getOutput();
+//    System.out.println("################# OUTPUT #################");
+//    System.out.println(xslt);
+//    System.out.println("################# END #################");
+    output = new FileOutput();
+    output.store(xslt, "target/xslt_rules.snippet");    
+    
   }
 
 }
