@@ -21,7 +21,7 @@
 18;"operational costs of a preservation action";"Running licence costs per object";"Software licence costs for running an action on one object (in € per object)";"Positive Number";;;
 19;"operational costs of a preservation action";"Running personell costs";"Running costs for operating an action per year (in €)";"Positive Number";;;"action://business/costs/execution/staffRunning"
 20;"operational costs of a preservation action";"Total running costs";"Total sum of costs of operating an action (in €)";"Positive Number";;;
-21;"operational costs of a preservation action";"Running costs per object";"Running operational costs of an action in € per object.";"Positive Number";;;
+21;"operational costs of a preservation action";"Running costs per object";"Running operational costs of an action in € per object.";"Positive Number";;;"action://business/costs/execution/totalPerObject"
 22;"setup costs of a preservation action";"Initial hardware costs";"Initial hardware costs arising when deploying an action (e.g. new hardware needs to be acquired to get software running) measured in €";"Positive Number";;;"action://business/costs/setup/hardwareInitial"
 23;"setup costs of a preservation action";"Other initial setup costs";"Setup costs of an action which do not fit to any other given setup costs, in €";"Positive Number";;;"action://business/costs/setup/other
 "
@@ -143,37 +143,37 @@
 130;"validity of XMP metadata";"valid IPTC metadata";"Indicates if  XMP-metadata contains valid IPTC data.";"Boolean";;;"outcome://object/image/metadata/xmp/validIptc"
 131;"validity of XMP metadata";"valid Doublin Core (DC) metadata";"Indicates if XMP-metadata contains valid Dublin Core data.";"Boolean";;;"outcome://object/image/metadata/xmp/validDc"
 132;"validity of embedded metadata";"EXIF:bits per sample correct";"Indicates whether bits per sample extracted from EXIF metadata is equal to bits per sample determined from image data";"Boolean";;;
-133;"coverage of content";"number of objects supported";"Total number of objects supported by an action";"Positive Integer";;;"functionalSuitability/functionalCompleteness/generic/numberOfObjectsSupported"
+133;"coverage of content";"number of objects supported";"Total number of objects supported by an action";"Positive Integer";;;"action://functionalSuitability/functionalCompleteness/generic/numberOfObjectsSupported"
 134;"automated quality assurance support";"automated QA supported";"Indicates whether results of an action support automated QA with current means";"Boolean";;;"outcome://effect/automatedQAPossible"
 135;"archival storage costs";"comparative archival storage costs";"Effects of a preservation action on archival storage costs: Do they increase or decrease?";"Ordinal";"increase/unchanged/decrease";;"outcome://effect/costs/archivalStorage"
-136;"preservation watch and planning costs";"comparative preservation watch and planning costs";"Effects of a preservation action on preservation watch and planning costs: Do they increase or decrease?";"Ordinal";"increase/unchanged/decrease";;"costs/preservationWatchAndPlanning"
-137;"archival storage costs";"quantitative archival storage costs";"Effects of a preservation action on archival storage costs, expressed as archival storage costs per object over a time period of 10 years, measured in  €.";"Positive Number";;;"costs/archivalStorageQuantitative"
+136;"preservation watch and planning costs";"comparative preservation watch and planning costs";"Effects of a preservation action on preservation watch and planning costs: Do they increase or decrease?";"Ordinal";"increase/unchanged/decrease";;"outcome://effect/costs/preservationWatchAndPlanning"
+137;"archival storage costs";"quantitative archival storage costs";"Effects of a preservation action on archival storage costs, expressed as archival storage costs per object over a time period of 10 years, measured in  €.";"Positive Number";;;"outcome://effect/costs/archivalStorageQuantitative"
 138;"format adoption";"number of free tools that are not open source";"Indicator for the adoption of a format, expressed as the number of free tools that are not open source that support a format";"Positive Integer";;;"outcome://format/sustainability/adaption/toolSupport/nrOfFreeNotOpenSourceTools
 "
-139;"format adoption";"number of free tools that are open source";"Indicator for the adoption of a format, expressed as the number of free tools that are open source  that support a format";"Positive Integer";;;"sustainability/adaption/toolSupport/nrOfFreeOpenSourceTools"
+139;"format adoption";"number of free tools that are open source";"Indicator for the adoption of a format, expressed as the number of free tools that are open source  that support a format";"Positive Integer";;;"outcome://format/sustainability/adaption/toolSupport/nrOfFreeOpenSourceTools"
 140;"format adoption";"number of proprietary tools";"Indicator for the adoption of a format, expressed as the number of proprietary tools that support a format";"Positive Integer";;;"outcome://format/sustainability/adaption/toolSupport/nrOfProprietaryTools"
 141;"format adoption";"number of tools";"Indicator for the adoption of a format, expressed as the total number of all tools that support a format";"Positive Integer";;;"outcome://format/sustainability/adaption/toolSupport/nrOfTools"
 142;"format stability";"format backwards compatbility";"Indicates whether a format is backwards compatible to previous versions.";"Boolean";;;"outcome://format/sustainability/stability/backwardsCompatibility"
 143;"format transparency";"format complexity";"Indicator of the complexity of a format as judged by experts in the domain";"Ordinal";"high/medium/low";;"outcome://format/sustainability/transparency/complexity"
-144;"format support for specific database features";"format support for column type datetime";"Indicates whether the outcome format supports the database column type DateTime.";"Boolean";;;"qualityAndFunctionality/database/supportForColumnTypeDateTime"
-145;"format support for specific database features";"format support for column type number";"Indicates whether the outcome format supports the database column type Number.";"Boolean";;;"qualityAndFunctionality/database/supportForColumnTypeNumber"
-146;"format support for specific database features";"format support for column type string";"Indicates whether the outcome format supports the database column type String.";"Boolean";;;"qualityAndFunctionality/database/supportForColumnTypeString"
-147;"format documentation";"format documentation availability";"Availability of the documentation for a format";"Ordinal";"yes-free/yes-pay/no";;"sustainability/disclosure/documentation/availability"
-148;"format documentation";"format documentation quality";"Judgement of the quality of documentation available for a format";"Ordinal";"complete/fragmentary/useless";;"sustainability/disclosure/documentation/quality"
+144;"format support for specific database features";"format support for column type datetime";"Indicates whether the outcome format supports the database column type DateTime.";"Boolean";;;"outcome://format/qualityAndFunctionality/database/supportForColumnTypeDateTime"
+145;"format support for specific database features";"format support for column type number";"Indicates whether the outcome format supports the database column type Number.";"Boolean";;;"outcome://format/qualityAndFunctionality/database/supportForColumnTypeNumber"
+146;"format support for specific database features";"format support for column type string";"Indicates whether the outcome format supports the database column type String.";"Boolean";;;"outcome://format/qualityAndFunctionality/database/supportForColumnTypeString"
+147;"format documentation";"format documentation availability";"Availability of the documentation for a format";"Ordinal";"yes-free/yes-pay/no";;"outcome://format/sustainability/disclosure/documentation/availability"
+148;"format documentation";"format documentation quality";"Judgement of the quality of documentation available for a format";"Ordinal";"complete/fragmentary/useless";;"outcome://format/sustainability/disclosure/documentation/quality"
 149;"format metadata support";"custom metadata support";"Indicates whether additionaly metadata can be embedded in the outcome format.";"Boolean";;;"outcome://format/sustainability/selfDocumentation/metadata/embedCustomMetadata
 "
 150;"format metadata support";"image metadata support";"Indicates whether image metadata can be embedded in the outcome format.";"Boolean";;;"outcome://format/sustainability/selfDocumentation/metadata/embedImageMetadata"
 151;"format metadata support";"image previews embeddable";"Indicate whether a preview image can be embedded in the outcome format.";"Boolean";;;"outcome://format/sustainability/selfDocumentation/metadata/embedPreviewImage"
-152;"format recoverability";"error awareness";"Indicates the presence of features built into the format that allow the detection of and recovery from errors (such as checksums)";"Ordinal";"recoverable/detectable/none";;"sustainability/recoverability/errorAwareness"
+152;"format recoverability";"error awareness";"Indicates the presence of features built into the format that allow the detection of and recovery from errors (such as checksums)";"Ordinal";"recoverable/detectable/none";;"outcome://format/sustainability/recoverability/errorAwareness"
 153;"format disclosure";"identification possibilities";"Possibilies to identify the outcome format (cf. PRONOM)";"Ordinal";"automatic_specific/automatic_generic/automatic_tentative/manual/none";;"outcome://format/sustainability/disclosure/identificationPossibilities"
 154;"format viewing features support";"format facilitates zooming";"Indicates where the format provides specific support for zooming";"Boolean";;;"outcome://format/qualityAndFunctionality/image/zoomPossible"
-155;"format licence costs";"format licence costs incurred";"Indicates whether licence costs occur at using the outcome format.";"Boolean";;;"business/licenceCostsForUse"
+155;"format licence costs";"format licence costs incurred";"Indicates whether licence costs occur at using the outcome format.";"Boolean";;;"outcome://format/business/licenceCostsForUse"
 156;"format adoption";"format supported by web browsers";"Indicates whether the format can be natively displayed by browsers.";"Boolean";;;"outcome://format/sustainability/adoption/toolSupport/nativeBrowserSupport"
 157;"format viewing features support";"format supported by OCR software";"Indicates whether tools exists which can apply optical character recognition directly to the outcome format";"Boolean";;;"outcome://format/sustainability/adoption/toolSupport/ocrPossible"
 158;"format transparency";"format readable as plain text";"Indicates whether the outcome format is human readable as plain text.";"Boolean";;;"outcome://format/qualityAndFunctionality/readableAsPlainText"
 159;"format rights";"format IPR protection";"Existence of rights applying to the outcome format.";"Ordinal";"open/ipr_protected/proprietary";;"outcome://format/sustainability/rights"
-160;"format stability";"format speed of change";"Stability of the outcome format with respect to changes.";"Ordinal";"less than 1 year/1-2 years/3-5 years/more than 5 years";;"sustainability/stability/speedOfChange"
-161;"format stability";"format standardization";"Standardization of the outcome format.";"Ordinal";"international standard/de facto standard/none";;"sustainability/stability/standardization"
+160;"format stability";"format speed of change";"Stability of the outcome format with respect to changes.";"Ordinal";"less than 1 year/1-2 years/3-5 years/more than 5 years";;"outcome://format/sustainability/stability/speedOfChange"
+161;"format stability";"format standardization";"Standardization of the outcome format.";"Ordinal";"international standard/de facto standard/none";;"outcome://format/sustainability/stability/standardization"
 162;"format adoption";"format ubiquity";"Ubiquity or popularity of the outcome format.";"Ordinal";"ubiquitous/widespread/specialised/obsolete";;"outcome://format/sustainability/adoption/ubiquity"
 163;"format viewing features support";"format supports usage restrictions";"Indicates whether usage restrictions can be applied to the outcome format.";"Boolean";;;"outcome://format/technicalProtectionMechanisms/usageRestrictionsPossible"
 164;"format disclosure";"format validation support";"Possibilies to validate conformance to a format.";"Ordinal";"automatic/manual/none";;"outcome://format/sustainability/disclosure/validationPossibilities
@@ -181,7 +181,7 @@
 165;"content interpretation quality";"format stores interpreted data";"Indicates whether the format contains interpreted data (as opposed to original raw data plus interpretation instructions)";"Boolean";;;"outcome://format/qualityAndFunctionality/image/interpretedData
 "
 166;"content interpretation quality";"format reinterpretation quality loss";"Indicates whether a quality loss occurs at reinterpretating the content stored in a format";"Ordinal";"minimal/acceptable/not acceptable";;"outcome://format/qualityAndFunctionality/image/qualityLossAtReinterpretating"
-167;"format viewing features support";"format facilitates PDF creation";"Indicates whether it is commonly easy to create a pdf from the format.";"Boolean";;;"qualityAndFunctionality/image/pdfCreationPossible"
+167;"format viewing features support";"format facilitates PDF creation";"Indicates whether it is commonly easy to create a pdf from the format.";"Boolean";;;"outcome://format/qualityAndFunctionality/image/pdfCreationPossible"
 168;"OCR Text";"OCR text retained";"Indicates whether the OCR text extracted from an image has been retained.";"Boolean";;;"outcome://object/image/ocrText#equal
 "
 169;"colour depth";"bits per sample equal";"Bits per component (channel) for each pixel";"Boolean";;;"outcome://object/image/bitsPerSample#equal"
@@ -333,8 +333,7 @@ outcome://object/videoGame/audio/sound/synchronousToVideo
 306;"database content";"database columns datatypes retained";"Indicates whether datatypes of database columns have been retained";"Boolean";;;
 307;"database content";"database foreign keys retained";"Indicates whether database foreign keys have been retained";"Boolean";;;
 308;"database content";"database primary keys retained";"Indicates whether database primary keys have been retained";"Boolean";;;
-309;"database content";"database privileges retained";"Indicates whether database privileges have been retained";"Boolean";;;"Ordinal: all/all connected to objects
-outcome://object/database/content/privileges#databasePrivilegesPreserved"
+309;"database content";"database privileges retained";"Indicates whether database privileges have been retained";"Boolean";;;
 310;"database content";"database roles retained";"Indicates whether database roles have been retained";"Boolean";;;"outcome://object/database/context/roles#retained"
 311;"database content";"database routines retained";"Indicates whether database routines have been retained";"Boolean";;;"outcome://object/database/context/routines#retained"
 312;"database content";"database schemas retained";"Indicates whether database schemas have been retained";"Boolean";;;"outcome://object/database/context/schemas#retained"
@@ -388,7 +387,7 @@ outcome://object/database/content/privileges#databasePrivilegesPreserved"
 358;"document content";"document font encoding retained";"Font encoding used in the document.";"Boolean";;;
 359;"document content";"document font text marks";"Indicates if font text marks exist in the document.";"Boolean";;;"outcome://object/document/content/font/textMarks#equal
 outcome://object/document/content/font/textMarks"
-360;"document content";"number of characters in document";"Number of characters the document consists of.";"Positive Integer";;;"Positive number"
+360;"document content";"number of characters in document";"Number of characters the document consists of.";"Positive Integer";;"Y";
 361;"document content";"percentage of diacritics retained";"Percentage of retained diacritics";"Positive Number";;;
 362;"document content";"percentage of equation captions retained";"Percentage of retained equation captions";"Positive Number";;;
 363;"document content";"percentage of equation positions retained";"Percentage of retained equation positions";"Positive Number";;;

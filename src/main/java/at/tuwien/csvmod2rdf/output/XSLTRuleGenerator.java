@@ -60,14 +60,15 @@ public class XSLTRuleGenerator implements OutputGenerator {
 							.replaceAll("@\\{scale\\}",
 									this.getScaleId(m.getScale()));
 
-					String restriction = "";
+					String restriction = m.getRestriction();
 					if ("booleanScale".equals(this.getScaleId(m.getScale()))) {
 						restriction = "Yes/No";
 					}
-					if (m.getRestriction()  != null && !"".equals(m.getRestriction())) {
-						restriction = m.getRestriction();
+					if (restriction  != null && !"".equals(restriction)) {
+						rule = rule.replace(Constants.RESTRICTION_KEY, "restriction=\""+restriction+"\"");
+					} else {
+						rule = rule.replace(Constants.RESTRICTION_KEY, "");
 					}
-					rule = rule.replace(Constants.RESTRICTION_KEY, restriction);
 					
 					if (m.getScale() != null && !m.getScale().equals("")) {
 						if (m.getOldPropertyUri() != null

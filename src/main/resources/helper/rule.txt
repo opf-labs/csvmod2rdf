@@ -9,7 +9,7 @@
 			<name>@{categoryname}</name>
 		</category>
 	</attribute>
-	<@{scale} unit="" restriction="@{restriction}">
+	<@{scale} unit="" @{restriction} >
 		<changelog created="{$nowAsISO_8601str}" createdBy="xslt-migration" changed="{$nowAsISO_8601str}" changedBy="xslt-migration"/>
 	</@{scale}>
 </measure>
