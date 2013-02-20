@@ -1,4 +1,4 @@
-package com.petpet.csvmod2rdf.common;
+package at.tuwien.csvmod2rdf.common;
 
 public class Constants {
 

@@ -1,6 +1,6 @@
-package com.petpet.csvmod2rdf;
+package at.tuwien.csvmod2rdf;
 
-import com.petpet.csvmod2rdf.converter.Converter;
+import at.tuwien.csvmod2rdf.converter.Converter;
 
 /**
  * Entry point

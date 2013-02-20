@@ -1,4 +1,4 @@
-package com.petpet.csvmod2rdf.output;
+package at.tuwien.csvmod2rdf.output;
 
 import java.io.FileWriter;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.petpet.csvmod2rdf.converter;
+package at.tuwien.csvmod2rdf.converter;
 
 import java.util.List;
 import java.util.Map;
@@ -6,20 +6,20 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.petpet.csvmod2rdf.interfaces.OutputGenerator;
-import com.petpet.csvmod2rdf.model.Attribute;
-import com.petpet.csvmod2rdf.model.Measure;
-import com.petpet.csvmod2rdf.output.FileOutput;
-import com.petpet.csvmod2rdf.output.RDFXMLGenerator;
-import com.petpet.csvmod2rdf.output.XSLTRuleGenerator;
-import com.petpet.csvmod2rdf.parser.AttributeIntegrityChecker;
-import com.petpet.csvmod2rdf.parser.AttributesParser;
-import com.petpet.csvmod2rdf.parser.CSVParser;
-import com.petpet.csvmod2rdf.parser.CategoryIntegrityChecker;
-import com.petpet.csvmod2rdf.parser.CategoryParser;
-import com.petpet.csvmod2rdf.parser.MeasuresIntegrityChecker;
-import com.petpet.csvmod2rdf.parser.MeasuresParser;
-import com.petpet.csvmod2rdf.utils.Cache;
+import at.tuwien.csvmod2rdf.interfaces.OutputGenerator;
+import at.tuwien.csvmod2rdf.model.Attribute;
+import at.tuwien.csvmod2rdf.model.Measure;
+import at.tuwien.csvmod2rdf.output.FileOutput;
+import at.tuwien.csvmod2rdf.output.RDFXMLGenerator;
+import at.tuwien.csvmod2rdf.output.XSLTRuleGenerator;
+import at.tuwien.csvmod2rdf.parser.AttributeIntegrityChecker;
+import at.tuwien.csvmod2rdf.parser.AttributesParser;
+import at.tuwien.csvmod2rdf.parser.CSVParser;
+import at.tuwien.csvmod2rdf.parser.CategoryIntegrityChecker;
+import at.tuwien.csvmod2rdf.parser.CategoryParser;
+import at.tuwien.csvmod2rdf.parser.MeasuresIntegrityChecker;
+import at.tuwien.csvmod2rdf.parser.MeasuresParser;
+import at.tuwien.csvmod2rdf.utils.Cache;
 
 public class Converter {
 

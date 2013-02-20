@@ -1,14 +1,14 @@
-package com.petpet.csvmod2rdf.parser;
+package at.tuwien.csvmod2rdf.parser;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
 
+import at.tuwien.csvmod2rdf.model.Attribute;
+import at.tuwien.csvmod2rdf.model.Measure;
 import au.com.bytecode.opencsv.CSVReader;
 
-import com.petpet.csvmod2rdf.model.Attribute;
-import com.petpet.csvmod2rdf.model.Measure;
 
 public class MeasuresParser extends CSVParser {
 

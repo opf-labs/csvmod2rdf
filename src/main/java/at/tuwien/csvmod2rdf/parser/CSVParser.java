@@ -1,7 +1,7 @@
-package com.petpet.csvmod2rdf.parser;
+package at.tuwien.csvmod2rdf.parser;
 
-import com.petpet.csvmod2rdf.interfaces.IntegrityCheckStrategy;
-import com.petpet.csvmod2rdf.utils.Cache;
+import at.tuwien.csvmod2rdf.interfaces.IntegrityCheckStrategy;
+import at.tuwien.csvmod2rdf.utils.Cache;
 
 public abstract class CSVParser {
 

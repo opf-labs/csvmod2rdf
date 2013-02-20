@@ -1,13 +1,13 @@
-package com.petpet.csvmod2rdf.parser;
+package at.tuwien.csvmod2rdf.parser;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+import at.tuwien.csvmod2rdf.model.Category;
+import at.tuwien.csvmod2rdf.model.CriterionCategory;
 import au.com.bytecode.opencsv.CSVReader;
 
-import com.petpet.csvmod2rdf.model.Category;
-import com.petpet.csvmod2rdf.model.CriterionCategory;
 
 public class CategoryParser extends CSVParser {
 

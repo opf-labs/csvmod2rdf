@@ -1,4 +1,4 @@
-package com.petpet.csvmod2rdf.output;
+package at.tuwien.csvmod2rdf.output;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -6,13 +6,13 @@ import java.util.Map;
 
 import org.apache.commons.io.IOUtils;
 
-import com.petpet.csvmod2rdf.common.Constants;
-import com.petpet.csvmod2rdf.interfaces.OutputGenerator;
-import com.petpet.csvmod2rdf.model.Attribute;
-import com.petpet.csvmod2rdf.model.Category;
-import com.petpet.csvmod2rdf.model.CriterionCategory;
-import com.petpet.csvmod2rdf.model.Measure;
-import com.petpet.csvmod2rdf.utils.Cache;
+import at.tuwien.csvmod2rdf.common.Constants;
+import at.tuwien.csvmod2rdf.interfaces.OutputGenerator;
+import at.tuwien.csvmod2rdf.model.Attribute;
+import at.tuwien.csvmod2rdf.model.Category;
+import at.tuwien.csvmod2rdf.model.CriterionCategory;
+import at.tuwien.csvmod2rdf.model.Measure;
+import at.tuwien.csvmod2rdf.utils.Cache;
 
 public class RDFXMLGenerator implements OutputGenerator {
 

@@ -1,11 +1,11 @@
-package com.petpet.csvmod2rdf.utils;
+package at.tuwien.csvmod2rdf.utils;
 
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.petpet.csvmod2rdf.model.Attribute;
-import com.petpet.csvmod2rdf.model.Category;
+import at.tuwien.csvmod2rdf.model.Attribute;
+import at.tuwien.csvmod2rdf.model.Category;
 
 public class Cache {
 

@@ -2,9 +2,9 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.petpet</groupId>
+  <groupId>at.tuwien</groupId>
   <artifactId>csvmod2rdf</artifactId>
-  <version>0.3.1</version>
+  <version>0.3.2</version>
   <packaging>jar</packaging>
 
   <name>csvmod2rdf</name>
@@ -31,7 +31,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>com.petpet.csvmod2rdf.App</mainClass>
+              <mainClass>at.tuwien.csvmod2rdf.App</mainClass>
             </manifest>
           </archive>
           <descriptorRefs>

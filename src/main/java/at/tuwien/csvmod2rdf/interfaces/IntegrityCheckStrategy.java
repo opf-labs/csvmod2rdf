@@ -1,4 +1,4 @@
-package com.petpet.csvmod2rdf.interfaces;
+package at.tuwien.csvmod2rdf.interfaces;
 
 public interface IntegrityCheckStrategy {
 

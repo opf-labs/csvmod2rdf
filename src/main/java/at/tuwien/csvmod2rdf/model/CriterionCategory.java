@@ -1,4 +1,4 @@
-package com.petpet.csvmod2rdf.model;
+package at.tuwien.csvmod2rdf.model;
 
 import java.util.List;
 

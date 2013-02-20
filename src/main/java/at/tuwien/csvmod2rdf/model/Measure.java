@@ -1,4 +1,4 @@
-package com.petpet.csvmod2rdf.model;
+package at.tuwien.csvmod2rdf.model;
 
 public class Measure {
 
