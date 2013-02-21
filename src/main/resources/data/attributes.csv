@@ -84,3 +84,6 @@
 83;"Functional correctness: Information Property";"available metadata for database";"Different metadata available for database"
 84;"Functional correctness: Information Property";"archival provenance information";"Provenance information on the archival process documented in outcome"
 85;"Functional correctness: Representation Instance Property";"database content";"Indicators for how well the content of the database has been preserved"
+86;"Functional correctness: Transformation Independent Property";"audio content";"Indicators for properties of audio content"
+87;"Functional correctness: Representation Instance Property";"video content";"Indicators for properties of video content"
+88;"Functional correctness: Representation Instance Property";"format specification";"Indicates the identified format of an object"
