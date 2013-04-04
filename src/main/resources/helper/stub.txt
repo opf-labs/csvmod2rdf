@@ -1,11 +1,14 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://scape-project.eu/pw/vocab/"
-  xml:base="http://scape-project.eu/pw/vocab/"
-  xmlns:scales="http://scape-project.eu/pw/vocab/scales#"
-  xmlns:scopes="http://scape-project.eu/pw/vocab/scopes#"
+<rdf:RDF xmlns="http://purl.org/DP/quality#"
+  xml:base="http://purl.org/DP/quality/"
+  xmlns:scales="http://purl.org/DP/quality/scales#"
+  xmlns:scopes="http://purl.org/DP/quality/scopes#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">  
      
 @{body}
 </rdf:RDF>     

@@ -1,5 +1,7 @@
 package at.tuwien.csvmod2rdf.converter;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
@@ -97,22 +99,32 @@ public class Converter {
     }
 
     System.out.println("Parsed " + cat + " categories, " + attr + " attributes and " + meas + " measures");
-    OutputGenerator gen = new RDFXMLGenerator(this.cache);
-    String rdf = gen.getOutput();
-    System.out.println("################# OUTPUT #################");
-    System.out.println(rdf);
-    System.out.println("################# END #################");
     
-    FileOutput output = new FileOutput();
-    output.store(rdf, null);
-    
-    gen = new XSLTRuleGenerator(this.cache);
-    String xslt = gen.getOutput();
-//    System.out.println("################# OUTPUT #################");
-//    System.out.println(xslt);
-//    System.out.println("################# END #################");
-    output = new FileOutput();
-    output.store(xslt, "xslt_rules.snippet");    
+    try {
+        FileWriter categoriesWriter = new FileWriter("quality_categories.rdf");
+        FileWriter attributesWriter = new FileWriter("quality_attributes.rdf");
+        FileWriter measuresWriter = new FileWriter("quality_measures.rdf");
+        
+        OutputGenerator gen = new RDFXMLGenerator(this.cache, categoriesWriter, attributesWriter, measuresWriter);
+        String rdf = gen.getOutput();
+        categoriesWriter.close();
+        attributesWriter.close();
+        measuresWriter.close();
+        
+//        System.out.println("################# OUTPUT #################");
+//        System.out.println(rdf);
+//        System.out.println("################# END #################");
+        
+//        FileOutput output = new FileOutput();
+//        output.store(rdf, "all_individuals.rdf");
+        
+        gen = new XSLTRuleGenerator(this.cache);
+        String xslt = gen.getOutput();
+        FileOutput output = new FileOutput();
+        output.store(xslt, "xslt_rules.snippet");
+    } catch (IOException e) {
+        e.printStackTrace();
+    }    
     
   }
 

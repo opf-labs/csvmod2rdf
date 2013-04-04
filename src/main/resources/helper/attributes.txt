@@ -1,7 +1,8 @@
-<rdf:Description rdf:about="http://scape-project.eu/pw/vocab/attributes/@{about}">
-  <rdf:type rdf:resource="http://scape-project.eu/pw/vocab/Attribute"/>
-  <rdfs:label>@{name}</rdfs:label>
-  <description>@{description}</description>
-  <criterioncategory rdf:resource="http://scape-project.eu/pw/vocab/categories/@{category}"/>@{measures}
+<rdf:Description rdf:about="http://purl.org/DP/quality/attributes#@{about}">
+  <rdf:type rdf:resource="http://purl.org/DP/quality#Attribute"/>
+  <skos:prefLabel>@{name}</skos:prefLabel>
+  <dct:description>@{description}</dct:description>
+  <criterionCategory rdf:resource="http://purl.org/DP/quality/categories#@{category}"/>
+  @{measures}
 </rdf:Description>
 

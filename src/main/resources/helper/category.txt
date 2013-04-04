@@ -1,5 +1,6 @@
-<rdf:Description rdf:about="http://scape-project.eu/pw/vocab/categories/@{about}">
-  <rdf:type rdf:resource="http://scape-project.eu/pw/vocab/Category"/>
-  <rdfs:label>@{name}</rdfs:label>@{subcategories}
+<rdf:Description rdf:about="http://purl.org/DP/quality/categories#@{about}">
+  <rdf:type rdf:resource="http://purl.org/DP/quality#Category"/>
+  <skos:prefLabel>@{name}</skos:prefLabel>
+  @{subcategories}
 </rdf:Description>
 

@@ -1,9 +1,9 @@
-<rdf:Description rdf:about="http://scape-project.eu/pw/vocab/measures/@{about}">
-  <rdf:type rdf:resource="http://scape-project.eu/pw/vocab/Measure"/>
-  <rdfs:label>@{name}</rdfs:label>
-  <description>@{description}</description>
-  <attribute rdf:resource="http://scape-project.eu/pw/vocab/attributes/@{attribute}"/>
-  <scale rdf:resource="http://scape-project.eu/pw/vocab/scales#@{scale}" />
+<rdf:Description rdf:about="http://purl.org/DP/quality/measures#@{about}">
+  <rdf:type rdf:resource="http://purl.org/DP/quality#Measure"/>
+  <skos:prefLabel>@{name}</skos:prefLabel>
+  <dct:description>@{description}</dct:description>
+  <attribute rdf:resource="http://purl.org/DP/quality/attributes#@{attribute}"/>
+  <scale rdf:resource="http://purl.org/DP/quality/scales#@{scale}" />
   <restriction>@{restriction}</restriction>
 </rdf:Description>
 

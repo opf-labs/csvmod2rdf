@@ -1,11 +1,11 @@
 <xsl:template match="plato:criterion[@ID='@{measurement_uri}']">
-<measure ID="http://scape-project.eu/pw/vocab/measures/@{about}">
+<measure ID="http://purl.org/DP/quality/measures#@{about}">
 	<name>@{name}</name>
 	<description>@{description}</description>
-	<attribute ID="http://scape-project.eu/pw/vocab/attributes/@{attribute}">
+	<attribute ID="http://purl.org/DP/quality/attributes#@{attribute}">
 		<name>@{attr_name}</name>
 		<description>@{attr_description}</description>
-		<category ID="http://scape-project.eu/pw/vocab/categories/@{category}" scope="@{scope}">
+		<category ID="http://purl.org/DP/quality/categories#@{category}" scope="@{scope}">
 			<name>@{categoryname}</name>
 		</category>
 	</attribute>

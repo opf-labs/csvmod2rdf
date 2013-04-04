@@ -1,1 +1,1 @@
-  <measure rdf:resource="http://scape-project.eu/pw/vocab/measures/@{id}" />
+  <measure rdf:resource="http://purl.org/DP/quality/measures#@{id}" />

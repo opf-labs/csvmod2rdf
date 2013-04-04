@@ -12,7 +12,7 @@ public class App {
     if (args.length != 3) {
       System.err.println("Wrong number of arguments!");
       System.err
-          .println("Usage: java -jar csvmod2rdf <path/to/qualitymod.csv> <path/to/attributes.csv> <path/to/easures.csv>");
+          .println("Usage: java -jar csvmod2rdf <path/to/qualitymod.csv> <path/to/attributes.csv> <path/to/measures.csv>");
       System.exit(1);
     }
     

@@ -1,1 +1,1 @@
-  <subcategory rdf:resource="http://scape-project.eu/pw/vocab/categories/@{id}" />
+  <subcategory rdf:resource="http://purl.org/DP/quality/categories#@{id}" />

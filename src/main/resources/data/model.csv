@@ -1,41 +1,41 @@
-Top category;Subcategory;;Criterion category (UNIQUE);scope
-Action;Action quality;Performance efficiency;Time behaviour;alternative action
-Action;Action quality;Performance efficiency;Resource utilization;alternative action
-Action;Action quality;Performance efficiency;Capacity;alternative action
-Action;Action quality;Compatability;Co-existence;alternative action
-Action;Action quality;Compatability;Interoperability;alternative action
-Action;Action quality;Usability;Appropriateness recognizability;alternative action
-Action;Action quality;Usability;Learnability;alternative action
-Action;Action quality;Usability;Operability;alternative action
-Action;Action quality;Usability;User error protection;alternative action
-Action;Action quality;Usability;User interface aesthetics;alternative action
-Action;Action quality;Usability;Accessibility;alternative action
-Action;Action quality;Portability;Adaptability;alternative action
-Action;Action quality;Portability;Installability;alternative action
-Action;Action quality;Portability;Replaceability;alternative action
-Action;Action quality;Reliability;Maturity;alternative action
-Action;Action quality;Reliability;Availability;alternative action
-Action;Action quality;Reliability;Fault tolerance;alternative action
-Action;Action quality;Reliability;Recoverability;alternative action
-Action;Action quality;Functional suitability;Functional completeness;alternative action
-Action;Action quality;Functional correctness;Functional correctness: Information Property;object
-Action;Action quality;Functional correctness;Functional correctness: Transformation Independent Property;object
-Action;Action quality;Functional correctness;Functional correctness: Representation Instance Property;object
-Action;Action quality;Functional correctness;Functional appropriateness;alternative action
-Action;Action quality;Maintainability;Modularity;alternative action
-Action;Action quality;Maintainability;Reusability;alternative action
-Action;Action quality;Maintainability;Analysability;alternative action
-Action;Action quality;Maintainability;Modifiability;alternative action
-Action;Action quality;Maintainability;Testability;alternative action
-Action;Action quality;Security;Confidentiality;alternative action
-Action;Action quality;Security;Integrity;alternative action
-Action;Action quality;Security;Non-repudiation;alternative action
-Action;Action quality;Security;Accountability;alternative action
-Action;Action quality;Security;Authenticity of the action;alternative action
-Action;Action quality;;Action costs;alternative action
-Action;Action quality;;Action licensing;alternative action
-Action;Action quality;;Action maintenance;alternative action
-Outcome;;;Outcome effect;alternative action
-Outcome;Format of the content;;Format sustainability;alternative action
-Outcome;Format of the content;;Format quality and functionality;alternative action
-Outcome;Format of the content;;Format business factors;alternative action
+"Top category";"Subcategory";;"Criterion category (UNIQUE)";"scope"
+"Action";"Action quality";"Performance efficiency";"Time behaviour";"alternative action"
+"Action";"Action quality";"Performance efficiency";"Resource utilization";"alternative action"
+"Action";"Action quality";"Performance efficiency";"Capacity";"alternative action"
+"Action";"Action quality";"Compatability";"Co-existence";"alternative action"
+"Action";"Action quality";"Compatability";"Interoperability";"alternative action"
+"Action";"Action quality";"Usability";"Appropriateness recognizability";"alternative action"
+"Action";"Action quality";"Usability";"Learnability";"alternative action"
+"Action";"Action quality";"Usability";"Operability";"alternative action"
+"Action";"Action quality";"Usability";"User error protection";"alternative action"
+"Action";"Action quality";"Usability";"User interface aesthetics";"alternative action"
+"Action";"Action quality";"Usability";"Accessibility";"alternative action"
+"Action";"Action quality";"Portability";"Adaptability";"alternative action"
+"Action";"Action quality";"Portability";"Installability";"alternative action"
+"Action";"Action quality";"Portability";"Replaceability";"alternative action"
+"Action";"Action quality";"Reliability";"Maturity";"alternative action"
+"Action";"Action quality";"Reliability";"Availability";"alternative action"
+"Action";"Action quality";"Reliability";"Fault tolerance";"alternative action"
+"Action";"Action quality";"Reliability";"Recoverability";"alternative action"
+"Action";"Action quality";"Functional suitability";"Functional completeness";"alternative action"
+"Action";"Action quality";"Functional correctness";"Functional correctness: Information Property";"object"
+"Action";"Action quality";"Functional correctness";"Functional correctness: Transformation Independent Property";"object"
+"Action";"Action quality";"Functional correctness";"Functional correctness: Representation Instance Property";"object"
+"Action";"Action quality";"Functional correctness";"Functional appropriateness";"alternative action"
+"Action";"Action quality";"Maintainability";"Modularity";"alternative action"
+"Action";"Action quality";"Maintainability";"Reusability";"alternative action"
+"Action";"Action quality";"Maintainability";"Analysability";"alternative action"
+"Action";"Action quality";"Maintainability";"Modifiability";"alternative action"
+"Action";"Action quality";"Maintainability";"Testability";"alternative action"
+"Action";"Action quality";"Security";"Confidentiality";"alternative action"
+"Action";"Action quality";"Security";"Integrity";"alternative action"
+"Action";"Action quality";"Security";"Non-repudiation";"alternative action"
+"Action";"Action quality";"Security";"Accountability";"alternative action"
+"Action";"Action quality";"Security";"Authenticity of the action";"alternative action"
+"Action";"Action quality";;"Action costs";"alternative action"
+"Action";"Action quality";;"Action licensing";"alternative action"
+"Action";"Action quality";;"Action maintenance";"alternative action"
+"Outcome";;;"Outcome effect";"alternative action"
+"Outcome";"Format of the content";;"Format sustainability";"alternative action"
+"Outcome";"Format of the content";;"Format quality and functionality";"alternative action"
+"Outcome";"Format of the content";;"Format business factors";"alternative action"

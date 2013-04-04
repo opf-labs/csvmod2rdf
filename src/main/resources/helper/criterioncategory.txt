@@ -1,6 +1,6 @@
-<rdf:Description rdf:about="http://scape-project.eu/pw/vocab/categories/@{about}">
-  <rdf:type rdf:resource="http://scape-project.eu/pw/vocab/CriterionCategory"/>
-  <rdfs:label>@{name}</rdfs:label>
-  <scope rdf:resource="http://scape-project.eu/pw/vocab/scopes#@{scope}" />
+<rdf:Description rdf:about="http://purl.org/DP/quality/categories#@{about}">
+  <rdf:type rdf:resource="http://purl.org/DP/quality#CriterionCategory"/>
+  <skos:prefLabel>@{name}</skos:prefLabel>
+  <scope rdf:resource="http://purl.org/DP/quality/scopes#@{scope}" />
 </rdf:Description>
 
