@@ -1,7 +1,10 @@
 package at.tuwien.csvmod2rdf.converter;
 
-import java.io.FileWriter;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.nio.charset.Charset;
 import java.util.List;
 import java.util.Map;
 
@@ -11,7 +14,6 @@ import org.slf4j.LoggerFactory;
 import at.tuwien.csvmod2rdf.interfaces.OutputGenerator;
 import at.tuwien.csvmod2rdf.model.Attribute;
 import at.tuwien.csvmod2rdf.model.Measure;
-import at.tuwien.csvmod2rdf.output.FileOutput;
 import at.tuwien.csvmod2rdf.output.RDFXMLGenerator;
 import at.tuwien.csvmod2rdf.output.XSLTRuleGenerator;
 import at.tuwien.csvmod2rdf.parser.AttributeIntegrityChecker;
@@ -101,9 +103,9 @@ public class Converter {
     System.out.println("Parsed " + cat + " categories, " + attr + " attributes and " + meas + " measures");
     
     try {
-        FileWriter categoriesWriter = new FileWriter("quality_categories.rdf");
-        FileWriter attributesWriter = new FileWriter("quality_attributes.rdf");
-        FileWriter measuresWriter = new FileWriter("quality_measures.rdf");
+        Writer categoriesWriter = new OutputStreamWriter(new FileOutputStream("quality_categories.rdf"), Charset.forName("UTF-8").newEncoder());
+        Writer attributesWriter = new OutputStreamWriter(new FileOutputStream("quality_attributes.rdf"), Charset.forName("UTF-8").newEncoder());
+        Writer measuresWriter = new OutputStreamWriter(new FileOutputStream("quality_measures.rdf"), Charset.forName("UTF-8").newEncoder());
         
         OutputGenerator gen = new RDFXMLGenerator(this.cache, categoriesWriter, attributesWriter, measuresWriter);
         String rdf = gen.getOutput();
@@ -111,17 +113,12 @@ public class Converter {
         attributesWriter.close();
         measuresWriter.close();
         
-//        System.out.println("################# OUTPUT #################");
-//        System.out.println(rdf);
-//        System.out.println("################# END #################");
-        
-//        FileOutput output = new FileOutput();
-//        output.store(rdf, "all_individuals.rdf");
-        
         gen = new XSLTRuleGenerator(this.cache);
         String xslt = gen.getOutput();
-        FileOutput output = new FileOutput();
-        output.store(xslt, "xslt_rules.snippet");
+        Writer xsltWriter = new OutputStreamWriter(new FileOutputStream("xslt_rules.snippet"), Charset.forName("UTF-8").newEncoder());
+        xsltWriter.append(xslt);
+        xsltWriter.close();
+        
     } catch (IOException e) {
         e.printStackTrace();
     }    

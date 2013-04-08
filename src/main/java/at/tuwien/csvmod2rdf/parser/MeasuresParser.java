@@ -1,8 +1,10 @@
 package at.tuwien.csvmod2rdf.parser;
 
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
 import java.util.List;
 
 import at.tuwien.csvmod2rdf.model.Attribute;
@@ -15,7 +17,7 @@ public class MeasuresParser extends CSVParser {
   @Override
   public void read() {
     try {
-      CSVReader reader = new CSVReader(new FileReader(this.getFile()), ';');
+      CSVReader reader = new CSVReader(new InputStreamReader(new FileInputStream(this.getFile()), Charset.forName("UTF-8").newDecoder()), ';');
       //skip header
       String[] line = reader.readNext();
       String id, attr, name, desc, scale, restriction, deprecated, oldPropertyUri;
@@ -34,7 +36,7 @@ public class MeasuresParser extends CSVParser {
           Measure m = new Measure(id, name, desc, a);
           m.setScale(scale);
           m.setRestriction(restriction);
-          // TODO set deprecated...
+          m.setDeprecated(deprecated);
 
           List<Measure> measures = a.getMeasures();
           measures.add(m);
