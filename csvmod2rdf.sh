@@ -1,0 +1,1 @@
+java -jar target/csvmod2rdf-0.3.2-jar-with-dependencies.jar src/main/resources/data/quality_categories.csv src/main/resources/data/quality_attributes.csv src/main/resources/data/quality_measures.csv 

@@ -29,10 +29,10 @@ public class AttributesParser extends CSVParser {
       String id, cat, name, desc;
       while ((line = reader.readNext()) != null) {
         if (this.getIntegrityChecker().examine(line)) {
-          id = line[0];
-          cat = line[1];
-          name = line[2];
-          desc = line[3];
+          id = line[0].trim();
+          cat = line[1].trim();
+          name = line[2].trim();
+          desc = line[3].trim();
 
           Category category = this.getCache().getCategory(cat);
 

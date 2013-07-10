@@ -23,22 +23,25 @@ public class CategoryParser extends CSVParser {
 
       while ((line = reader.readNext()) != null) {
         if (this.getIntegrityChecker().examine(line)) {
+           String col0 = line[0].trim();
+           String col1 = (null == line[1])? "" : line[1].trim();
+           String col2 = (null == line[2])? "" : line[2].trim();
 
-          Category cat = new Category(line[0], null);
+          Category cat = new Category(col0, null);
           this.getCache().putCategory(cat);
 
-          if (line[1] != null && !line[1].equals("")) {
-            cat = new Category(line[1], line[0]);
+          if (!"".equals(col1)) {
+            cat = new Category(col1, col0);
             this.getCache().putCategory(cat);
           }
 
-          if (line[2] != null && !line[2].equals("")) {
-            cat = new Category(line[2], line[1]);
+          if (!"".equals(col2)) {
+            cat = new Category(col2, col1);
             this.getCache().putCategory(cat);
           }
 
-          CriterionCategory critCat = new CriterionCategory(line[3], cat.getName());
-          critCat.setScope(line[4]);
+          CriterionCategory critCat = new CriterionCategory(line[3].trim(), cat.getName());
+          critCat.setScope(line[4].trim());
           this.getCache().putCategory(critCat);
         }
       }

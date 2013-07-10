@@ -23,14 +23,14 @@ public class MeasuresParser extends CSVParser {
       String id, attr, name, desc, scale, restriction, deprecated, oldPropertyUri;
       while ((line = reader.readNext()) != null) {
         if (this.getIntegrityChecker().examine(line)) {
-          id = line[0];
-          attr = line[1];
-          name = line[2];
-          desc = line[3];
-          scale = line[4];
-          restriction = line[5];
-          deprecated = line[6];
-          oldPropertyUri = line[7];
+          id = line[0].trim();
+          attr = line[1].trim();
+          name = line[2].trim();
+          desc = line[3].trim();
+          scale = line[4].trim();
+          restriction = line[5].trim();
+          deprecated = line[6].trim();
+          oldPropertyUri = line[7].trim();
 
           Attribute a = this.getCache().getAttribute(attr);
           Measure m = new Measure(id, name, desc, a);
