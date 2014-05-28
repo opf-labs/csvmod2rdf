@@ -52,7 +52,7 @@
 "51";"image size";"image width equal";"true iff image width has been preserved.";"Boolean";"";"";"outcome://object/image/width#equal"
 "52";"image size";"image height in pixels";"The vertical height of a digital image in pixel";"Positive Integer";"";"";"outcome://object/image/height"
 "53";"image size";"image height equal";"true iff image height has been preserved.";"Boolean";"";"";"outcome://object/image/height#equal"
-"54";"image size";"image resolution as string (width x height) as string";"Width and height of an image in number of pixels represented as string (e.g. 1024x768).";"Free Text";"";"";"outcome://object/image/resolution"
+"54";"image size";"image resolution (width x height) as string";"Width and height of an image in number of pixels represented as string (e.g. 1024x768).";"Free Text";"";"";"outcome://object/image/resolution"
 "55";"colour space of a digital image";"colour model";"Colour model of the decompressed image data.";"Ordinal";"WhiteIsZero/BlackIsZero/RGB/Palette/Transparency/CMYK/YCbCr/CIELab";"";""
 "56";"colour space of a digital image";"colour model preserved";"Indicates whether the colour model has been preserved.";"Boolean";"";"";"outcome://object/image/colourSpace#equal"
 "57";"colour profile of a digital image";"colour profile";"ICC profile data";"Free Text";"";"";""
@@ -401,3 +401,27 @@
 "400";"audio encoding";"audio bits per sample";"The number of bits per sample";"Positive Integer";"";"";""
 "401";"audio content";"audio duration";"The length of the audio file in seconds.";"Positive Number";"";"";""
 "402";"activity logging content";"activity report";"The activity report of a tool.";"Free Text";"";"";""
+"403";"audio content comparison";"waveform block similarity";"For each block (1 second audio) the algorithm calculates the optimal 'push' of one of the sound files, and a value for how good it was (a number between 0 and 1). Finally the value for the block where the best push was worst is returned. ";"Positive Number";"0.0/1.0";"";""
+"404";"coverage of content";"max object size handled in bytes";"The size of the largest object (e.g. a file) a workflow/component has handled. Illustrates capability of running on heterogeneous file sizes when combined with #405 (min object size handled in bytes)
+Example : 140,168,260 (~133.6 MB)";"Positive Integer";"";"";""
+"405";"coverage of content";"min object size handled in bytes";" The size of the smallest object (e.g. a file) a workflow/component has handled. Illustrates capability of running on heterogeneous file sizes when combined with #404 (max object size handled in bytes)
+Example : 20";"Positive Integer";"";"";""
+"406";"processing time";"throughput in bytes per second";"The throughput of data measured in bytes per second
+Example : 2500";"Positive Integer";"";"";""
+"407";"stability";"failed objects in percent";" Percent of objects on which the workflow failed, i.e. on which there was an error while processing the object and the object could not be fully processed";"Positive Number";"";"";""
+"408";"document structure";"number of pages";"Document page count";"Positive Integer";"";"";""
+"409";"file size";"file size";"Size of the digital object in bytes";"Positive Integer";"";"";""
+"410";"object encoding";"byte order";"Specifies the convention used to interpret the bytes of the object. (Also known as endianness)";"Ordinal";"little endian/big endian";"";""
+"411";"document metadata";"creating author";"Name of the author who created the digital object";"Free Text";"";"";""
+"412";"document metadata";"creating application";"Name of the application used to create the digital object";"Free Text";"";"";""
+"413";"format specification";"MIME type";"The media type according to http://www.iana.org/assignments/media-types/media-types.xhtml";"Free Text";"";"";""
+"414";"format specification";"format version";"The file format version
+Example : "1.6", "89a"";"Free Text";"";"";""
+"415";"format specification";"format name";"The file format name
+Example : Portable Document Format";"Free Text";"";"";""
+"416";"exactness";"QAFalseDifferentPercent";"Ratio of 'QA decided different'/'human judged same', that is ratio of content comparisons resulting in original and migrated different, even though human evaluation define original and migrated similar
+ 0.412 %";"Positive Number";"";"";""
+"417";"exactness";"IdentificationCorrectnessInPercent";"Defining a statistical measure for binary evaluations
+Example : 85 %";"Positive Number";"";"";""
+"418";"processing time";"number of objects per second";"Number of objects that can be processed per second
+Example : 250";"Positive Integer";"";"";""

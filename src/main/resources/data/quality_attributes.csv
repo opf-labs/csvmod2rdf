@@ -90,3 +90,5 @@
 "89";"Functional correctness: Transformation Independent Property";"audio content comparison";"Indicators for how well the content of the audio has been preserved"
 "90";"Functional correctness: Representation Instance Property";"audio encoding";"Describes how audio information is encoded."
 "91";"Functional correctness: Information Property";"activity logging content";"The actual content an activity produces as logging output."
+"92";"Functional correctness: Representation Instance Property";"object encoding";"Describes how the object is encoded, e.g. which byte order is used."
+"93";"Functional appropriateness";"exactness";"Describes how exact the result produced by the tool is."
